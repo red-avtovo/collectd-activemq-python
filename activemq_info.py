@@ -89,6 +89,9 @@ class AMQMonitor(object):
 
             gauges.append((queue, 'size', size))
             gauges.append((queue, 'consumerCount', consumer_count))
+            gauges.append((queue, 'enqueueCount',  enqueue_count))
+            gauges.append((queue, 'dequeueCount',  dequeue_count))
+
             counters.append((queue, 'enqueueCount',  enqueue_count))
             counters.append((queue, 'dequeueCount',  dequeue_count))
 
